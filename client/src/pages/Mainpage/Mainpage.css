@@ -1,0 +1,9 @@
+.mainpage__wrapper {
+  max-width: 1040px;
+}
+.lists__wrapper {
+  display: grid;
+  grid-template-columns: 150px 890px;
+  justify-content: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,44 @@
+.btn {
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 10px;
+    display: block;
+    border-radius: 5px;
+}
+.inputfield {
+    width: 300px;
+    height: 30px;
+    display: block;
+}
+.edit__form {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr) 35px;
+    grid-area: 2/2;
+    margin-bottom: 20px;
+}
+.error {
+    padding: 0;
+    color: red;
+}
+.edit__header {
+    grid-area: 1/2;
+    padding-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.edititem__wrapper {
+    position: fixed;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    height: 500px;
+    width: 500px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 3fr;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}

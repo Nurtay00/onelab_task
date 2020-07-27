@@ -29,7 +29,7 @@ function Mainpage(props: any) {
     // eslint-disable-next-line
     []
   );
-
+  console.log("props - ", props);
   const [edit, setedit] = useState(null);
   const [itemWindow, setitemWindow] = useState(false);
   const [categoryWindow, setcategoryWindow] = useState(false);

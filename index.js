@@ -15,7 +15,7 @@ mongoose.connect(
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
 
 app.use("/list", require("./routes/list"));
 app.use("/categories", require("./routes/category"));

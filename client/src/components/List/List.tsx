@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./List";
 export default function List(props: any) {
-  var sortedList;
+  var sortedList: any;
   if (props.category === "all") {
     sortedList = props.information.list;
   } else {

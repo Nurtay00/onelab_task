@@ -26,38 +26,40 @@ export default function List(props: any) {
           </tr>
         </thead>
         <tbody>
-          {props.information.list.map((item: any, index: number) => {
-            return (
-              <tr key={item._id}>
-                <td>{index + 1}</td>
-                <td>{item.name}</td>
-                <td>{item._id}</td>
-                <td>{item.category}</td>
-                <td>{item.purchasePrice}</td>
-                <td>{item.sellingPrice}</td>
-                <td>
-                  <span style={{ paddingLeft: "10px" }}>
-                    <i
-                      className="fas fa-trash"
-                      onClick={() => {
-                        props.removeClick({ window: true, item });
-                      }}
-                    />
-                  </span>
+          {sortedList === undefined
+            ? null
+            : sortedList.map((item: any, index: number) => {
+                return (
+                  <tr key={item._id}>
+                    <td>{index + 1}</td>
+                    <td>{item.name}</td>
+                    <td>{item._id}</td>
+                    <td>{item.category}</td>
+                    <td>{item.purchasePrice}</td>
+                    <td>{item.sellingPrice}</td>
+                    <td>
+                      <span style={{ paddingLeft: "10px" }}>
+                        <i
+                          className="fas fa-trash"
+                          onClick={() => {
+                            props.removeClick({ window: true, item });
+                          }}
+                        />
+                      </span>
 
-                  <span style={{ paddingLeft: "15px" }}>
-                    <i
-                      className="fas fa-edit"
-                      onClick={() => {
-                        props.setedit(item.id);
-                        props.click(true);
-                      }}
-                    />
-                  </span>
-                </td>
-              </tr>
-            );
-          })}
+                      <span style={{ paddingLeft: "15px" }}>
+                        <i
+                          className="fas fa-edit"
+                          onClick={() => {
+                            props.setedit(item.id);
+                            props.click(true);
+                          }}
+                        />
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
         </tbody>
       </Table>
     </div>

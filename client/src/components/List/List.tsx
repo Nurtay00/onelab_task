@@ -26,7 +26,7 @@ export default function List(props: any) {
           </tr>
         </thead>
         <tbody>
-          {sortedList.map((item: any, index: number) => {
+          {props.information.list.map((item: any, index: number) => {
             return (
               <tr key={item._id}>
                 <td>{index + 1}</td>

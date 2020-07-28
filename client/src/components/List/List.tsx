@@ -51,7 +51,7 @@ export default function List(props: any) {
                         <i
                           className="fas fa-edit"
                           onClick={() => {
-                            props.setedit(item.id);
+                            props.setedit(item._id);
                             props.click(true);
                           }}
                         />

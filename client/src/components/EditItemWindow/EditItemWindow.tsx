@@ -11,8 +11,9 @@ interface MyFormValues {
 }
 export default function EditItemWindow(props: any) {
   const sortedInfromation: any = {
-    ...props.information.list.filter((item: any) => item.id === props.edit),
+    ...props.information.list.filter((item: any) => item._id === props.edit),
   };
+
   const initialValues: MyFormValues = {
     name: sortedInfromation[0].name,
     category: sortedInfromation[0].category,

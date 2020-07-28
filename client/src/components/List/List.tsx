@@ -11,7 +11,6 @@ export default function List(props: any) {
       (item: any) => props.category === item.category
     );
   }
-  console.log("sortedList - ", sortedList);
   return (
     <div className="wrapper__list">
       <Table striped bordered hover size="sm" style={{ width: "890px" }}>
